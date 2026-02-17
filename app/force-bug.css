@@ -1,0 +1,11 @@
+/* Viewport and nodes don't receive pointer events (library default) */
+.react-flow__viewport {
+  pointer-events: none !important;
+}
+.react-flow__nodes {
+  pointer-events: none !important;
+}
+/* Overlay on top of nodes must block (unpatched library has no pointer-events: none here) */
+.react-flow__viewport-portal {
+  pointer-events: auto !important;
+}

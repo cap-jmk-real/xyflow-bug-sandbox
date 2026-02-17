@@ -1,0 +1,53 @@
+/* Interactive-nodes fix: restore pointer-events and cursors on viewport/nodes */
+
+.react-flow__viewport {
+  pointer-events: auto !important;
+  cursor: grab !important;
+}
+
+.react-flow__pane.dragging .react-flow__viewport {
+  cursor: grabbing;
+}
+
+.react-flow__nodes {
+  pointer-events: auto !important;
+  cursor: default;
+}
+
+.react-flow__pane.dragging .react-flow__nodes {
+  cursor: grabbing;
+}
+
+.react-flow__node {
+  pointer-events: auto !important;
+  cursor: default !important;
+}
+
+.react-flow__node.selectable,
+.react-flow__node.draggable {
+  cursor: default !important;
+}
+
+.react-flow__node.draggable.dragging {
+  cursor: grabbing !important;
+}
+
+/* Interactive elements inside nodes get appropriate cursor and pointer-events */
+.react-flow__node .nopan,
+.react-flow__node input.nopan,
+.react-flow__node textarea.nopan,
+.react-flow__node select.nopan,
+.react-flow__node button.nopan,
+.react-flow__node a.nopan {
+  pointer-events: auto !important;
+  cursor: default;
+}
+
+.react-flow__node button.nopan,
+.react-flow__node a.nopan {
+  cursor: pointer;
+}
+
+.react-flow__viewport-portal {
+  pointer-events: none !important;
+}
