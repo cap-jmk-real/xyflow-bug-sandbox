@@ -63,7 +63,7 @@ export default function FlowPage() {
                     boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
                   }}
                 >
-                  Fix on. To see the bug: comment out <code>import &apos;./fix.css&apos;</code> in this file.
+                  Bug on. To see the fix: uncomment <code>import &apos;./fix.css&apos;</code> in this file.
                 </div>
               </Panel>
             </ReactFlow>
